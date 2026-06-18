@@ -12,3 +12,8 @@ module "ec2" {
   ami_id        = "ami-0c55b159cbfafe1f0"
   instance_type = "t2.micro"
 }
+
+module "s3" {
+  source      = "../../modules/s3"
+  bucket_name = "dev-bucket-lingarajayli-tf-demo-2026"
+}
