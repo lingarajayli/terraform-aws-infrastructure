@@ -17,3 +17,9 @@ module "s3" {
   source      = "../../modules/s3"
   bucket_name = "dev-bucket-lingarajayli-tf-demo-2026"
 }
+
+module "iam" {
+  source      = "../../modules/iam"
+  role_name   = "ec2-role"
+  environment = "dev"
+}
